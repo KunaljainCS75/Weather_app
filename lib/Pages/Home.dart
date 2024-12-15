@@ -102,6 +102,7 @@ class _HomeState extends State<Home> {
             mainAxisAlignment: MainAxisAlignment.start,
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
+              const SizedBox(height: 24),
               Container(
                 //Search bar container
                 padding: const EdgeInsets.symmetric(horizontal: 10),
@@ -186,7 +187,7 @@ class _HomeState extends State<Home> {
                 children: [
                   Expanded(
                     child: Container(
-                      height: 80,
+                      height: 120,
                         decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(10),
                           color: Colors.white.withOpacity(0),
@@ -203,34 +204,40 @@ class _HomeState extends State<Home> {
                             //   width: 64,
                             // ),
                             Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
+                                Row(
+                                  crossAxisAlignment: CrossAxisAlignment.center,
+                                  children: [
                                 Text(info["temp_value"] + "°",
                                     style: GoogleFonts.rubik(
                                         textStyle: const TextStyle(
                                             fontSize: 50,
                                             fontWeight: FontWeight.w100,
                                             color: Colors.white))),
+                                    Text(info["climate_name"],
+                                        style: GoogleFonts.rubik(
+                                            textStyle: const TextStyle(
+                                                fontSize: 20, color: Colors.white,
+                                                fontWeight: FontWeight.w100))),
+                                  ]
+                                ),
                                 Text(
                                   "Time: " + info["time"],
                                   style: GoogleFonts.nunito(
                                       textStyle: const TextStyle(
                                           fontWeight: FontWeight.w300,
-                                          fontSize: 10,
+                                          fontSize: 15,
                                           color: Colors.white)),
                                 ),
                               ],
                             ),
-                            Column(
-                              children: [
-                                SizedBox(height: 30,),
-                                Text(info["climate_name"],
-                                    style: GoogleFonts.rubik(
-                                        textStyle: const TextStyle(
-                                            fontSize: 20, color: Colors.white,
-                                            fontWeight: FontWeight.w100))),
 
-                              ],
-                            ),
+
+
+
+
+
                           ],
                         )),
                   ),
@@ -271,7 +278,7 @@ class _HomeState extends State<Home> {
                     children: [
                       Expanded(
                         child: Container(
-                            height: 100,
+                            height: 120,
                             decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(10),
                               color: Colors.white.withOpacity(0.2),
@@ -320,7 +327,7 @@ class _HomeState extends State<Home> {
                       ),
                       Expanded(
                         child: Container(
-                            height: 100,
+                            height: 120,
                             decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(10),
                               color: Colors.white.withOpacity(0.2),
@@ -380,7 +387,7 @@ class _HomeState extends State<Home> {
                     children: [
                       Expanded(
                         child: Container(
-                            height: 100,
+                            height: 120,
                             decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(10),
                               color: Colors.white.withOpacity(0.2),
@@ -429,7 +436,7 @@ class _HomeState extends State<Home> {
                       ),
                       Expanded(
                         child: Container(
-                            height: 100,
+                            height: 120,
                             decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(10),
                               color: Colors.white.withOpacity(0.2),
@@ -489,7 +496,7 @@ class _HomeState extends State<Home> {
                     children: [
                       Expanded(
                         child: Container(
-                            height: 100,
+                            height: 120,
                             decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(10),
                               color: Colors.white.withOpacity(0.2),
@@ -538,7 +545,7 @@ class _HomeState extends State<Home> {
                       ),
                       Expanded(
                         child: Container(
-                            height: 100,
+                            height: 120,
                             decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(10),
                               color: Colors.white.withOpacity(0.2),
