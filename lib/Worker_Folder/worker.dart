@@ -1,3 +1,4 @@
+import 'package:flutter_dotenv/flutter_dotenv.dart';
 import "package:http/http.dart";
 import 'dart:convert';
 
@@ -28,7 +29,7 @@ class Worker {
     try {
       //Getting all data
       var url = Uri.parse(
-          "https://api.weatherapi.com/v1/current.json?key=3e892b7ef47743a790455552233010&q=$location");
+          "https://api.weatherapi.com/v1/current.json?key=${dotenv.env["API_KEY"]}&q=$location");
       Response resp = await get(url);
       Map data = jsonDecode(resp.body);
 
